@@ -59,15 +59,18 @@ product.forEach((product) =>{
 
 document.querySelector('.js-products-grid').innerHTML = productHTML;
 
-displayMessage = document.querySelector('.js-display-message');
-
 document.querySelectorAll('.js-add-to-cart').forEach((button) =>{
+  // let productContainer = button.closest('.product-container');
+  let displayMessage = button.closest('.product-container').querySelector('.js-display-message');
+
     button.addEventListener('click', () =>{
      let productId = button.dataset.productId;
 
-      setTimeout(() => {
-        displayMessage.innerHTML = 'Added';
+       displayMessage.innerHTML = 'Added';
         displayMessage.style.color = 'Green';
+
+      setTimeout(() => {
+        displayMessage.innerHTML = '';
       }, 2000);
       
 

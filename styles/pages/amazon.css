@@ -154,3 +154,10 @@
   padding: 8px;
   border-radius: 50px;
 }
+.js-display-message {
+  transition: opacity 0.5s; /* add a transition effect to opacity */
+}
+
+.js-display-message.fade-out {
+  opacity: 0; /* set opacity to 0 to hide the message */
+}
